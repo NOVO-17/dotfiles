@@ -19,8 +19,8 @@ return{
 				NOTE = { icon = " ", color = "hint", alt = { "INFO", "READ", "COLORS" } },
 				TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			},
-		})
 
+		})
 		-- keymaps
 		vim.keymap.set("n", "]t", function() todo_comments.jump_next() end, { desc = "Next todo comment" })
 		vim.keymap.set("n", "[t", function() todo_comments.jump_prev() end, { desc = "Previous todo comment" })
