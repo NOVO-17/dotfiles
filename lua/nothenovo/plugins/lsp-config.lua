@@ -11,14 +11,13 @@ return {
     lazy = false,
     opts = {
       automatic_installation = true,
-      -- NOTE: TypeScript naming is in flux (tsserver <-> ts_ls). We include both
       -- NOTE: use lsp-config names
       ensure_installed = {
         "lua_ls",
         "html",
         "cssls",
         "tailwindcss",
-        "tsserver", 
+        -- "tsserver",   --this is not a lsp-config name
         "ts_ls",   
         "prismals",
         "emmet_ls",
@@ -38,7 +37,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local servers = {
         lua_ls = {},
-        ts_ls = {}, -- prefer this name for lspconfig; lspconfig will look up the config
+        ts_ls = {}, -- prefer this name for lspconfig; 
         html = {},
         cssls = {},
         tailwindcss = {},
@@ -66,7 +65,7 @@ return {
         vim.lsp.config(name, merged)
         vim.lsp.enable(name)
       end
-      vim.notify("LSP configs registered (vim.lsp.config) and enabled.", vim.log.levels.INFO)
+      -- vim.notify("LSP configs registered (vim.lsp.config) and enabled.", vim.log.levels.INFO)
     end,
   },
 }

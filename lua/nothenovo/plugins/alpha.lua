@@ -15,7 +15,7 @@ return {
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.startify")
 		-- local utils = require("utils")
-		_Gopts = {
+		opts = {
 			position = "center",
 			hl = "Type",
 			wrap = "overflow",
