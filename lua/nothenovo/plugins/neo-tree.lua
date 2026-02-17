@@ -7,12 +7,12 @@ return{
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal left<CR>', {})
+    vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal right<CR>', {})
 
     require("neo-tree").setup({
       filesystem = {
     filtered_items = {
-      visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+      visible = true, -- True makes it visible(dimmed)
       hide_dotfiles = false,
       hide_gitignored = true,
     },
